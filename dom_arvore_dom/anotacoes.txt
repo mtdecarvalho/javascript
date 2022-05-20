@@ -1,0 +1,7 @@
+O objeto global do navegador é o window, que é como se fosse pai de todos os elementos do navegador, o "topo" dos elementos.
+
+Árvore DOM: window -> document -> head e body
+
+window é pai de document que é pai de head e body.
+head e body são filhos de document que é filho de window.
+Assim, todos os elementos dentro do body são filhos do mesmo.
