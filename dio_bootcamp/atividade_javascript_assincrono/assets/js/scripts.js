@@ -3,15 +3,11 @@ const BASE_URL = 'https://api.thecatapi.com/v1/images/search';
 const botao = document.querySelector('#change-cat');
 
 const getCats = async() => {
-    try {
-        const data = await fetch(BASE_URL); // pega os dados da URL
-        const json = await data.json(); // converte para um json
-        
-        return json[0].url; // dentro do json, pegamos o que importa, que é a url, e retornamos
-    }
-    catch(err) {
-        console.log(err.message);
-    }
+    const data = await fetch(BASE_URL) // pega os dados da url
+    .then(res=> res.json()) // converte a response em json
+    .catch(e => console.log(e.message)) // no caso de erro, loga a mensagem
+    
+    return data[0].url;// retorna a url da imagem de gato
 }
 
 const loadImg = async () => {
