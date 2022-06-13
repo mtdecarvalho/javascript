@@ -43,7 +43,7 @@ function criaCalculadora() {
         },
 
         apagaUm() {
-            //                               retorna o valor da string -1 caractere
+            // retorna o valor da string -1 caractere
             this.display.value = this.display.value.slice(0, -1);
         },
 
